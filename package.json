@@ -1,0 +1,36 @@
+{
+  "name": "fc-vue",
+  "version": "1.0.0",
+  "description": "pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --inline --hot",
+    "s1": "node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luohong123/fc-vue.git"
+  },
+  "keywords": [
+    "pdf"
+  ],
+  "author": "qingcheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luohong123/fc-vue/issues"
+  },
+  "homepage": "https://github.com/luohong123/fc-vue#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  }
+}

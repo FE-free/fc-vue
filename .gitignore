@@ -1,2 +1,7 @@
 node_moudles/
 node_moudles
+dist
+.dist
+build/ 
+*.zip 
+.git

@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-08-28 15:55:37
  * @LastEditors: luohong
- * @LastEditTime: 2019-08-29 14:31:56
+ * @LastEditTime: 2019-08-30 14:36:38
  * @Description: 
  * @email: 3300536651@qq.com
  */
@@ -22,8 +22,8 @@ const config = {
     entry: './src/index.js',
     // 出口文件
     output: {
-        path: path.resolve('dist'), // 打包后的目录，必须是绝对路径
-        filename: 'bundle.js' // 打包后的文件名称
+        path: path.resolve('docs'), // 打包后的目录，必须是绝对路径
+        filename: '[name].bundle.[hash:5].js' // 打包后的文件名称
     },
     // 处理对应模块
     module: {
@@ -45,14 +45,27 @@ const config = {
                 })
             },
             {
-                test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-                loader: 'file-loader?name=[name].[ext]'
+                test: /\.jpe?g$|\.jpeg?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
+                use: 'file-loader?name=/assets/images/[name].[ext]'
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 50000, // 低于 50000 字节（50k）的图片会以 base64 编码
+                    outputPath: './asset/images',
+                    name: '[name].[hash:5].[ext]',
+                    publicPath: './docs/assets/images'
+                }
+
             }
         ]
     },
     // 对应的插件
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({
+            cleanOnceBeforeBuildPatterns: ['**/*', '!static-files*']
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({ // 配置html模版
@@ -64,6 +77,11 @@ const config = {
         new ExtractTextWebpackPlugin('css/style.css'),
         // 打包前先清空
     ],
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js' // 用 webpack 1 时需用 'vue/dist/vue.common.js'
+        }
+    },
     // 开发服务器配置
     devServer: {
         before(app, server, compiler) {
@@ -81,8 +99,8 @@ const config = {
             });
         },
         contentBase: [
-            path.resolve(__dirname, './dist/html'),
-            path.resolve(__dirname, './dist')
+            path.resolve(__dirname, './docs/html'),
+            path.resolve(__dirname, './docs')
         ],
         host: 'localhost',
         port: 9000, // 端口

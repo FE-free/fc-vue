@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-08-28 14:22:35
  * @LastEditors: luohong
- * @LastEditTime: 2019-08-30 17:46:05
+ * @LastEditTime: 2019-09-02 17:39:21
  * @Description: 
  * @email: 3300536651@qq.com
  -->
@@ -19,30 +19,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
         integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous">
     </script>
-<link rel="shortcut icon" href="favicon.ico"><link href="css/style.css" rel="stylesheet"></head>
+    <!-- <script src="../node_modules/vue-router/dist/vue-router.js"></script> -->
+    <!-- <script src="../node_modules/vue-router/dist/vue-router.js"></script> -->
+<link rel="shortcut icon" href="favicon.ico"></head>
 
 <body>
+
+    <!-- route outlet -->
     <div id="app">
-        <div class="navbar">PDF在线导出</div>
-        <div class="content">
-            <div class="template1" id="renderPdf">
-                <div class="template-head">
-                    <span class="show-text" v-on:click="editName='Y'" v-if="editName=='N'"> {{name}}</span>
-                    <input v-else v-on:keyup.enter="editName='N'" class="edit-text" type="text" v-model="name" />
-                    <!-- <div class="avatar"><img src="../assets/images/1.jpeg" /> </div> -->
-                </div>
-                <div class="template-body">
-
-                </div>
-                <div class="template-footer">
-
-                </div>
-            </div>
-            <div>
-                <button type="button" v-on:click="exportPdf()">导出pdf</button>
-            </div>
-        </div>
     </div>
-<script type="text/javascript" src="main.bundle.6d3f4.js"></script></body>
+
+    <!-- </div> -->
+<script type="text/javascript" src="main.bundle.5b132.js"></script></body>
 
 </html>

@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-08-30 17:46:49
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-02 18:20:12
+ * @LastEditTime: 2019-09-03 11:20:26
  * @Description: 
  * @email: 3300536651@qq.com
  -->
@@ -36,3 +36,5 @@
     <button type="button" v-on:click="exportPdf()">导出pdf</button>
 </div>
 ```
+- vue-loader 没有 vue-template-compiler 
+编译.vue文件

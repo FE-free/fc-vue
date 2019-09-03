@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-09-02 10:52:10
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-02 18:32:55
+ * @LastEditTime: 2019-09-03 18:00:07
  * @Description: 
  * @email: 3300536651@qq.com
  */
@@ -21,16 +21,27 @@ Vue.use(Router)
 // const Template2 = {
 //     template: '<div>template2</div>'
 // }
-export default new Router({
-    routes: [{
-            path: '/template1',
-            name: 'template1',
-            component: require('../components/template/template1.vue')
-        },
-        {
-            path: '/template2',
-            name: 'template2',
-            component: require('../components/template/template2.vue')
-        }
-    ]
-})
+
+export function creatRouter() {
+    return new Router({
+        mode: 'history',
+        routes: [{
+                path: '/',
+                name: 'main',
+                component: () => import('@/components/template/template1')
+            }, {
+                path: '/template1',
+                name: 'template1',
+                component: () => import('@/components/template/template1')
+            },
+            {
+                path: '/template2',
+                name: 'template2',
+                component: () => import('@/components/template/template2')
+            }, {
+                path: '*',
+                redirect: '/'
+            }
+        ]
+    })
+}

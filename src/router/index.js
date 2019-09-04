@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-09-02 10:52:10
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-04 14:26:54
+ * @LastEditTime: 2019-09-04 18:05:53
  * @Description: 
  * @email: 3300536651@qq.com
  */
@@ -18,7 +18,7 @@ export function creatRouter() {
                 component: Layout,
                 hidden: true,
                 children: [{
-                    path: 'home',
+                    path: '/',
                     component: () => import('@views/home/index')
                 }]
             },

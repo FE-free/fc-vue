@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "1d961881791069d7ca12";
+/******/ 	var hotCurrentHash = "8e13f91609602de2d466";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -816,7 +816,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "1d961881791069d7ca12";
+/******/ 	var hotCurrentHash = "8e13f91609602de2d466";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1719,7 +1719,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"a-layout\",\n    { staticClass: \"layout\", attrs: { id: \"components-layout-demo-top\" } },\n    [\n      _c(\"a-layout-header\", [\n        _c(\"div\", { staticClass: \"layout-header\" }, [\n          _c(\"img\", { attrs: { src: _vm.logo, height: \"40\" } })\n        ])\n      ]),\n      _vm._v(\" \"),\n      _c(\"a-layout-content\", [\n        _c(\n          \"div\",\n          {\n            style: { background: \"#fff\", padding: \"24px\", minHeight: \"280px\" }\n          },\n          [_c(\"span\", { staticClass: \"text\" }, [_vm._v(\"Content\")])]\n        )\n      ]),\n      _vm._v(\" \"),\n      _c(\"a-layout-footer\", { staticStyle: { \"text-align\": \"center\" } }, [\n        _vm._v(\"\\n    开发者在线简历 ©2019 Created by FE-free\\n  \")\n      ])\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/layout/index.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"a-layout\",\n    { staticClass: \"layout\", attrs: { id: \"components-layout-demo-top\" } },\n    [\n      _c(\"a-layout-header\", [\n        _c(\"div\", { staticClass: \"layout-header\" }, [\n          _c(\"img\", { attrs: { src: _vm.logo, height: \"40\" } })\n        ])\n      ]),\n      _vm._v(\" \"),\n      _c(\"a-layout-content\", [\n        _c(\n          \"div\",\n          {\n            style: { background: \"#fff\", padding: \"24px\", minHeight: \"280px\" }\n          },\n          [_c(\"router-view\")],\n          1\n        )\n      ]),\n      _vm._v(\" \"),\n      _c(\"a-layout-footer\", { staticStyle: { \"text-align\": \"center\" } }, [\n        _vm._v(\"\\n    开发者在线简历 ©2019 Created by FE-free\\n  \")\n      ])\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack:///./src/layout/index.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -1838,7 +1838,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue_
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"creatRouter\", function() { return creatRouter; });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ \"./node_modules/vue-router/dist/vue-router.esm.js\");\n/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/layout */ \"./src/layout/index.vue\");\n/*\n * @Author: luohong\n * @Date: 2019-09-02 10:52:10\n * @LastEditors: luohong\n * @LastEditTime: 2019-09-04 14:26:54\n * @Description: \n * @email: 3300536651@qq.com\n */\n\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\nfunction creatRouter() {\n  return new vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n    mode: 'history',\n    routes: [{\n      path: '/',\n      component: _layout__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n      hidden: true,\n      children: [{\n        path: 'home',\n        component: function component() {\n          return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! @views/home/index */ \"./src/views/home/index.vue\"));\n        }\n      }]\n    }, {\n      path: '*',\n      redirect: '/'\n    }]\n  });\n}\n\n//# sourceURL=webpack:///./src/router/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"creatRouter\", function() { return creatRouter; });\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.esm.js\");\n/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ \"./node_modules/vue-router/dist/vue-router.esm.js\");\n/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/layout */ \"./src/layout/index.vue\");\n/*\n * @Author: luohong\n * @Date: 2019-09-02 10:52:10\n * @LastEditors: luohong\n * @LastEditTime: 2019-09-04 18:05:53\n * @Description: \n * @email: 3300536651@qq.com\n */\n\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\nfunction creatRouter() {\n  return new vue_router__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n    mode: 'history',\n    routes: [{\n      path: '/',\n      component: _layout__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n      hidden: true,\n      children: [{\n        path: '/',\n        component: function component() {\n          return __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! @views/home/index */ \"./src/views/home/index.vue\"));\n        }\n      }]\n    }, {\n      path: '*',\n      redirect: '/'\n    }]\n  });\n}\n\n//# sourceURL=webpack:///./src/router/index.js?");
 
 /***/ })
 

@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-09-02 14:52:55
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-04 17:53:33
+ * @LastEditTime: 2019-09-04 18:04:03
  * @Description: 
  * @email: 3300536651@qq.com
  -->
@@ -15,7 +15,7 @@
     </a-layout-header>
     <a-layout-content >
       <div :style="{ background: '#fff', padding: '24px', minHeight: '280px' }">
-        <span class="text">Content</span>
+        <router-view></router-view>
       </div>
     </a-layout-content>
     <a-layout-footer style="text-align: center">

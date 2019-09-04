@@ -2,14 +2,13 @@
  * @Author: luohong
  * @Date: 2019-08-28 15:55:37
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-04 17:02:13
+ * @LastEditTime: 2019-09-04 17:44:15
  * @Description: 
  * @email: 3300536651@qq.com
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
-var webserver = require("webpack-dev-server")
 // 拆分css
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
 const {
@@ -49,20 +48,7 @@ const config = {
             // 它会应用到普通的 `.js` 文件
             {
                 test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        less: ExtractTextWebpackPlugin.extract({
-                            fallback: 'vue-style-loader',
-                            use: 'css-loader!less-loader'
-                        }),
-                        css: ExtractTextWebpackPlugin.extract({
-                            fallback: 'vue-style-loader',
-                            use: 'css-loader'
-                        })
-                    }
-                    // other vue-loader options go here
-                }
+                loader: ['vue-loader'],
             }, {
                 test: /\.js$/,
                 exclude: file => (
@@ -81,12 +67,8 @@ const config = {
                 }
             },
             {
-                test: /\.css$/, // 从右到左解析css
-                loader: ExtractTextWebpackPlugin.extract({
-                    fallback: 'style-loader',
-                    use: 'css-loader'
-                }),
-                exclude: /node_modules/,
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.jpg$|\.jpeg$|\.ico$|\.gif$|\.png$/,

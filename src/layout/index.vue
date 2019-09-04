@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-09-02 14:52:55
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-04 17:04:29
+ * @LastEditTime: 2019-09-04 17:53:33
  * @Description: 
  * @email: 3300536651@qq.com
  -->
@@ -10,16 +10,16 @@
    <a-layout id="components-layout-demo-top" class="layout">
     <a-layout-header>
       <div class="layout-header">
-        <img :src="logo" height="50"/> 
+        <img :src="logo" height="40"/> 
       </div>
     </a-layout-header>
-    <a-layout-content style="padding: 0 50px">
+    <a-layout-content >
       <div :style="{ background: '#fff', padding: '24px', minHeight: '280px' }">
         <span class="text">Content</span>
       </div>
     </a-layout-content>
     <a-layout-footer style="text-align: center">
-      Ant Design ©2018 Created by Ant UEDwwsss
+      开发者在线简历 ©2019 Created by FE-free
     </a-layout-footer>
   </a-layout>
 </template>
@@ -38,15 +38,16 @@ export default {
 </script>
 
 <style>
-:global {
-  .ant-layout-header {
-      background: #fff;
-      box-shadow: 0 1px 2px 0 rgba(0,0,0,.06);
-  }
-}
-.layout-header {
+.ant-layout-header {
+    position: relative;
+    z-index: 999;
     background: #fff;
     box-shadow: 0 1px 2px 0 rgba(0,0,0,.06);
+    height:60px;
+    line-height:60px;
+}
+.layout-header {
+   
 }
 .text {
   color: red;

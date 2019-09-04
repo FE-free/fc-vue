@@ -2,13 +2,16 @@
  * @Author: luohong
  * @Date: 2019-09-02 10:39:35
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-03 17:20:48
+ * @LastEditTime: 2019-09-04 13:55:51
  * @Description: 
  * @email: 3300536651@qq.com
  -->
 
 <template>
-  <div class="example">test 111 {{ msg }}</div>
+  <div class="example">test 111 {{ msg }}
+    <img :src="imgUrl" width="80" height="80"/>
+    <img :src="imgUrl"  width="80" height="80"/>
+  </div>
 </template>
 
 <script>
@@ -16,13 +19,17 @@ console.log('这是template1')
 // import 'jspdf';
 // import html2canvas from 'html2canvas';
 // import toolbar from '../toolbar.vue'
+import imgUrl from '@assets/images/1.jpeg';
 export default {
     name:'tempate1',
-     data: {
+    data(){
+        return {
         msg: 'Hello world!',
         message: '400000',
         name: '青成',
-        editName: 'N' // 名字
+        imgUrl: imgUrl,
+        editName: 'N', // 名字
+        }
     },
     methods: {
         // exportPdf: function () {

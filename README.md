@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-08-30 17:46:49
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-03 11:20:26
+ * @LastEditTime: 2019-09-04 14:30:37
  * @Description: 
  * @email: 3300536651@qq.com
  -->
@@ -38,3 +38,6 @@
 ```
 - vue-loader 没有 vue-template-compiler 
 编译.vue文件
+```bash
+npm install ant-design-vue --save
+```

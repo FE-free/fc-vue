@@ -2,12 +2,15 @@
  * @Author: luohong
  * @Date: 2019-08-28 16:10:04
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-03 18:03:23
+ * @LastEditTime: 2019-09-04 17:03:54
  * @Description: 
  * @email: 3300536651@qq.com
  */
 import Vue from 'vue';
-import App from './App'
+import Antd from 'ant-design-vue';
+import 'style-loader!css-loader!ant-design-vue/dist/antd.css';
+import App from './App';
+Vue.use(Antd);
 // import 'jspdf';
 import {
     creatRouter

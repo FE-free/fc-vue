@@ -7,7 +7,7 @@
  * @email: 3300536651@qq.com
  -->
 <template>
-  <div class="error">404
+  <div class="error">404页面
   </div>
 </template>
 

@@ -1,10 +1,9 @@
 
 
 <template>
-     <div>2</div>
+     <div>模版2</div>
 </template>
 <script>
-// import toolbar from '../toolbar.vue'
 export default {
     name:'tempate2',
     data(){
@@ -17,7 +16,6 @@ export default {
 
     },
     components:{
-        // toolbar
     }
 }
 </script>

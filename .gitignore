@@ -1,7 +1,6 @@
-node_moudles/
-node_moudles
+node_modules/
+node_modules
 dist
 .dist
-build/ 
 *.zip 
 .git

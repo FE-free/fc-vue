@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-08-28 15:55:37
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-04 17:44:15
+ * @LastEditTime: 2019-09-05 17:48:04
  * @Description: 
  * @email: 3300536651@qq.com
  */
@@ -35,7 +35,7 @@ const config = {
     output: {
         // __dirname表示此文件在被执行时所在的地址
         path: path.resolve(__dirname, '..', 'docs'), // 打包后的目录，必须是绝对路径
-        filename: '[name].bundle.[hash:5].js' // 打包后的文件名称
+        filename: '[name].bundle.[hash:5].js', // 打包后的文件名称
     },
     optimization: {
         splitChunks: {
@@ -76,6 +76,7 @@ const config = {
                 options: {
                     name: '[name].[ext]',
                     outputPath: 'assets/images/',
+                    assetsPublicPath: '/'
                 }
             },
             {
@@ -119,6 +120,7 @@ const config = {
             "@assets": path.join(__dirname, "..", "src", "assets"),
             "@views": path.join(__dirname, "..", "src", "views"),
             '@': path.join(__dirname, '..', 'src'),
+            '@utils': path.join(__dirname, '..', 'src', 'utils')
         }
     },
     // 对应的插件
@@ -130,8 +132,8 @@ const config = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({ // 配置html模版
             title: 'pdf测试',
-            template: './src/index.html',
-            favicon: './src/favicon.ico',
+            template: path.join(__dirname, '..', 'src/index.html'),
+            favicon: path.join(__dirname, '..', 'src/favicon.ico'),
         }),
         // 拆分后会把css文件放到dist目录下的css/style.css 
         new ExtractTextWebpackPlugin('css/style.[hash:5].css'),

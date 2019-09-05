@@ -5,11 +5,11 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./build/webpack.config.js",
+    "start": "webpack-dev-server --config ./build/webpack.config.dev.js",
     "start1": "webpack-dev-server ./src/main.js  --devtool eval --progress --colors --hot --content-base build",
-    "webpack": "webpack --watch --config ./build/webpack.config.js",
+    "dev": "webpack --watch --config ./build/webpack.config.dev.js",
     "s1": "node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "build": ""
+    "build": "webpack --watch --config ./build/webpack.config.prod.js"
   },
   "repository": {
     "type": "git",

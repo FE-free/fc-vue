@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-08-28 14:22:35
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-06 10:22:52
+ * @LastEditTime: 2019-09-06 10:33:28
  * @Description: 
  * @email: 3300536651@qq.com
  -->
@@ -14,18 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>pdf在线生成模版</title>
-    <script>
-        // 这段代码要放在其他js的前面
-        (function () {
-            var redirect = sessionStorage.redirect;
-            delete sessionStorage.redirect;
-            if (redirect && redirect != location.href) {
-                history.replaceState(null, null, redirect);
-            }
-        })();
-    </script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <meta http-equiv="refresh" content="0;URL='/REPO_NAME_HERE'">
     </meta>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"

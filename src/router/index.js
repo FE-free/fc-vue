@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-09-02 10:52:10
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-05 17:31:24
+ * @LastEditTime: 2019-09-06 10:17:15
  * @Description: 
  * @email: 3300536651@qq.com
  */
@@ -30,7 +30,7 @@ export function creatRouter() {
             },
             {
                 path: '*',
-                component: () => import('@views/error/404')
+                component: (resolve) => require(['@views/error/404'],resolve)
                 // redirect: '/'
             }
         ]

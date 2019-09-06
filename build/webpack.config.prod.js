@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-08-28 15:55:37
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-06 09:50:29
+ * @LastEditTime: 2019-09-06 10:38:36
  * @Description: 
  * @email: 3300536651@qq.com
  */
@@ -36,6 +36,7 @@ const config = {
         // __dirname表示此文件在被执行时所在的地址
         path: path.resolve(__dirname, '..', 'docs'), // 打包后的目录，必须是绝对路径
         filename: '[name].bundle.[hash:5].js', // 打包后的文件名称
+        publicPath: '/fc-vue/'
     },
     optimization: {
         splitChunks: {
@@ -140,6 +141,7 @@ const config = {
         // 打包前先清空
         // vue 加载器，将你定义过的其它规则复制并应用到 .vue 文件里相应语言的块
         new VueLoaderPlugin(),
+        // 解决gh-pages 404问题
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         })

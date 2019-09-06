@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-09-02 10:52:10
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-06 10:17:15
+ * @LastEditTime: 2019-09-06 10:44:07
  * @Description: 
  * @email: 3300536651@qq.com
  */
@@ -12,7 +12,7 @@ Vue.use(Router)
 import Layout from '@/layout'
 export function creatRouter() {
     const router = new Router({
-        mode: 'history',
+        mode: 'hash', // 设置为history gh-pages 出现404
         routes: [{
                 path: '/',
                 component: Layout,

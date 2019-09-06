@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-08-28 15:55:37
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-05 18:00:33
+ * @LastEditTime: 2019-09-06 09:50:29
  * @Description: 
  * @email: 3300536651@qq.com
  */
@@ -139,7 +139,10 @@ const config = {
         new ExtractTextWebpackPlugin('css/style.[hash:5].css'),
         // 打包前先清空
         // vue 加载器，将你定义过的其它规则复制并应用到 .vue 文件里相应语言的块
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('production')
+        })
 
     ],
 

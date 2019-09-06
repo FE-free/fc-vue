@@ -2,14 +2,14 @@
  * @Author: luohong
  * @Date: 2019-09-02 11:03:15
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-05 17:53:21
+ * @LastEditTime: 2019-09-06 14:23:57
  * @Description: 
  * @email: 3300536651@qq.com
  -->
 <template>
     <div>
         <div class="toolbar">
-            <a-button type="default">回到首页</a-button>
+            <a-button type="default" v-on:click="backHome()">回到首页</a-button>
             <a-button type="primary" v-on:click="exportTemplate('template1','我的模版')">导出模版</a-button>
         </div>
     
@@ -34,6 +34,9 @@
         methods: {
             exportTemplate (id, fileName) {
                 exportPdf(id, fileName);
+            },
+            backHome(){
+                this.$router.push('/');
             }
         },
         computed: {

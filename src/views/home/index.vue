@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-09-04 14:02:36
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-05 16:21:47
+ * @LastEditTime: 2019-09-06 14:29:06
  * @Description: 
  * @email: 3300536651@qq.com
  -->
@@ -11,18 +11,17 @@
     <div class="banner">
       <img class="banner-item" :src="banner1" width="100%" />
     </div>
-    <resume-template1></resume-template1>
-      <div class="classify">
-        <a-checkable-tag color="blue" v-model="checkedFe" @change="handleChange">前端</a-checkable-tag>
-        <a-checkable-tag color="" v-model="checkedJava" @change="handleChange">Java</a-checkable-tag>
-      </div>
-      <div style="background-color: #ececec; padding: 20px;">
-        <a-row :gutter="16">
-          <a-col :span="6" v-for="(template,i) in templates" v-bind:key="template.id" v-bind:class="{marginT: i>3}">
-            <resume-item :title="template.title" :imgUrl="template.img" :description="template.description"></resume-item>
-          </a-col>
-        </a-row>
-      </div>
+    <div class="classify">
+      <a-checkable-tag color="blue" v-model="checkedFe" @change="handleChange">前端</a-checkable-tag>
+      <a-checkable-tag color="" v-model="checkedJava" @change="handleChange">Java</a-checkable-tag>
+    </div>
+    <div style="background-color: #ececec; padding: 20px;">
+      <a-row :gutter="16">
+        <a-col :span="6" v-for="(template,i) in templates" v-bind:key="template.id" v-bind:class="{marginT: i>3}">
+          <resume-item :title="template.title" :imgUrl="template.img" :description="template.description"></resume-item>
+        </a-col>
+      </a-row>
+    </div>
   </div>
 </template>
 

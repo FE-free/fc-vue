@@ -2,7 +2,7 @@
  * @Author: luohong
  * @Date: 2019-09-02 14:52:55
  * @LastEditors: luohong
- * @LastEditTime: 2019-09-04 18:04:03
+ * @LastEditTime: 2019-09-06 14:42:17
  * @Description: 
  * @email: 3300536651@qq.com
  -->
@@ -14,7 +14,7 @@
       </div>
     </a-layout-header>
     <a-layout-content >
-      <div :style="{ background: '#fff', padding: '24px', minHeight: '280px' }">
+      <div :style="{ background: '#fafafa', padding: '24px', minHeight: '280px' }">
         <router-view></router-view>
       </div>
     </a-layout-content>
